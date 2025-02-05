@@ -16,7 +16,7 @@
 
 include:
   # all profiles
-  - services/AD_docker_img/compose.yml
+  - services/AD_docker_image/compose.yml
   - services/MOTOR_docker_image/compose.yml
   - services/PE_docker_image/compose.yml
   - services/gateway/compose.yml
