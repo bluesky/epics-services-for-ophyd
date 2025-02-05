@@ -16,14 +16,14 @@
 
 include:
   # all profiles
-  - services/bl01t-ea-test-01/compose.yml
-  - services/bl01t-di-cam-01/compose.yml
-  - services/bl01t-mo-sim-01/compose.yml
+  - services/AD_docker_img/compose.yml
+  - services/MOTOR_docker_image/compose.yml
+  - services/PE_docker_image/compose.yml
   - services/gateway/compose.yml
   - services/pvagw/compose.yml
 
   # develop profile only
-  - services/phoebus/compose.yml
+  # - services/phoebus/compose.yml
 
   # deploy profile only
   - services/epics-opis/compose.yml
@@ -36,8 +36,10 @@ services:
     restart: no
     volumes:
       - .:/workspace
+      - /tmp/.X11-unix:/tmp/.X11-unix
     command: /bin/bash -c "/workspace/include/init.sh"
     environment:
+      - DISPLAY=host.docker.internal:0
       - EPICS_CA_SERVER_PORT
       - EPICS_CA_REPEATER_PORT
       - EPICS_PVA_SERVER_PORT

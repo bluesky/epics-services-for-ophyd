@@ -39,7 +39,17 @@ xhost +SI:localuser:$(id -un)
 export UIDGID=$USER_ID:$USER_GID
 # default to the test profile for docker compose
 export COMPOSE_PROFILES=test
+
 # for test profile our ca-gateway publishes PVS on the loopback interface
 export EPICS_CA_ADDR_LIST=127.0.0.1:5094
+# this was the one for example services. Not sure which is needed for ophyd tests?
+
+
+# add in the environment variables from the ophyd epics_exports.sh
+# export DOCKER0_IP="172.17.0.1"
+#export EPICS_CA_ADDR_LIST=$( echo $DOCKER0_IP | sed -e 's/^\([0-9]\+\)\.\([0-9]\+\)\..*$/\1.\2.255.255/' )
+export EPICS_CA_AUTO_ADDR_LIST="no"
+export EPICS_CA_MAX_ARRAY_BYTES=10000000
+
 # make a short alias for docker-compose for convenience
 alias dc='$docker compose'

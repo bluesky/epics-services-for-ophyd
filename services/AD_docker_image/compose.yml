@@ -1,0 +1,32 @@
+services:
+
+  AD_DOCKER_IMAGE:
+
+    extends:
+      service: linux_ioc
+      file: ../../include/ioc.yml
+
+    image: prjemian/synapps-6.1-ad-3.7:latest
+
+    # labels:
+    #   version: 0.1.0
+
+#     environment:
+#       IOCSH_PS1: bl01t-ea-test-01 >
+#       IOC_NAME: bl01t-ea-test-01
+#       IOC_PREFIX: BL01T-EA-TEST-01
+
+#     volumes:
+#       - ../../opi/auto-generated/bl01t-ea-test-01:/epics/opi
+
+#     configs:
+#       - source: bl01t-ea-test-01_config
+#         target: epics/ioc/config
+
+# configs:
+#   bl01t-ea-test-01_config:
+#     file: ./config
+
+# include:
+#   - path:
+#       ../../include/networks.yml

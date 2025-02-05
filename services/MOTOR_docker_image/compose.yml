@@ -1,6 +1,6 @@
 services:
 
-  bl01t-mo-sim-01:
+  ophyd-motor-sim:
 
     extends:
       service: linux_ioc
@@ -12,18 +12,18 @@ services:
       version: 0.1.0
 
     environment:
-      IOCSH_PS1: bl01t-mo-sim-01 >
-      IOC_NAME: bl01t-mo-sim-01
+      IOCSH_PS1: ophyd-motor-sim >
+      IOC_NAME: ophyd-motor-sim
 
     volumes:
-      - ../../opi/auto-generated/bl01t-mo-sim-01:/epics/opi
+      - ../../opi/auto-generated/ophyd-motor-sim:/epics/opi
 
     configs:
-      - source:  bl01t-mo-sim-01_config
+      - source:  ophyd-motor-sim_config
         target: epics/ioc/config
 
 configs:
-  bl01t-mo-sim-01_config:
+  ophyd-motor-sim_config:
     file: ./config
 
 include:
