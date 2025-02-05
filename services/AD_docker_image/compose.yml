@@ -7,6 +7,8 @@ services:
       file: ../../include/ioc.yml
 
     image: prjemian/synapps-6.1-ad-3.7:latest
+    entrypoint: /bin/bash && iocSimDetector/simDetector.sh start
+
 
     # labels:
     #   version: 0.1.0
