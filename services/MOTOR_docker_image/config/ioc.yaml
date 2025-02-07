@@ -31,12 +31,12 @@ entities:
     DESC: Motor Ax 2
     home: 2
 
-  - type: motorSim.simMotorAxis
-    controller: sim-controller1
-    ADDR: 3
-    M: X3}Mtr
-    DESC: Motor Ax 3
-    home: 3
+  # - type: motorSim.simMotorAxis
+  #   controller: sim-controller1
+  #   ADDR: 3
+  #   M: X3}Mtr
+  #   DESC: Motor Ax 3
+  #   home: 3
 
   # - type: motorSim.simMotorAxis
   #   controller: sim-controller1
