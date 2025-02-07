@@ -30,7 +30,7 @@ include:
 
 services:
   init:
-    image: ubuntu
+    image: ubuntu:latest
     security_opt:
       - label=disable
     restart: no
