@@ -12,8 +12,8 @@ entities:
   - type: devIocStats.iocAdminSoft
     IOC: "{{ ioc_name | upper }}"
 
-  - type: epics.StartupCommand
-    command: dbLoadRecords("/epics/ioc/config/ioc.db")
+  # - type: epics.StartupCommand
+  #   command: dbLoadRecords("/epics/ioc/config/ioc.db")
 
   # - type: epics.dbpf
   #   pv: bl01t:A
