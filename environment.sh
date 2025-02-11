@@ -41,7 +41,7 @@ export UIDGID=$USER_ID:$USER_GID
 export COMPOSE_PROFILES=test
 
 # for test profile our ca-gateway publishes PVS on the loopback interface
-export EPICS_CA_ADDR_LIST=127.0.0.1:5094
+export EPICS_CA_ADDR_LIST="127.0.0.1:5094 127.0.0.1 192.168.1.78"
 # this was the one for example services. Not sure which is needed for ophyd tests?
 
 

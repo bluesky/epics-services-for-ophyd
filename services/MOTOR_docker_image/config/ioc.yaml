@@ -14,7 +14,7 @@ entities:
 
   - type: motorSim.simMotorController
     controllerName: sim-controller1
-    numAxes: 3
+    numAxes: 4
     P: "XF:31IDA-OP{Tbl-Ax:"
 
   - type: motorSim.simMotorAxis
@@ -30,6 +30,42 @@ entities:
     M: X2}Mtr
     DESC: Motor Ax 2
     home: 2
+
+  - type: motorSim.simMotorAxis
+    controller: sim-controller1
+    ADDR: 3
+    M: X3}Mtr
+    DESC: Motor Ax 3
+    home: 3
+
+  - type: motorSim.simMotorController
+    controllerName: sim
+    numAxes: 3
+    P: "sim:mtr"
+
+  - type: motorSim.simMotorAxis
+    controller: sim
+    ADDR: 1
+    M: "1"
+    DESC: sim Motor Ax 1
+    home: 1
+
+  - type: motorSim.simMotorAxis
+    controller: sim
+    ADDR: 2
+    M: "2"
+    DESC: sim Motor Ax 1
+    home: 2
+
+  # - type: motor.MotorSim
+  #   ADDR: 1
+  #   M: mtr1
+  #   home: 1
+
+  # - type: motor.MotorSim
+  #   ADDR: 2
+  #   M: mtr2
+  #   home: 2
 
   # - type: motorSim.simMotorAxis
   #   controller: sim-controller1
