@@ -1,6 +1,6 @@
 services:
 
-  bl01t-di-cam-01:
+  ophyd-adsim-cam:
 
     extends:
       service: linux_ioc
@@ -12,21 +12,21 @@ services:
       version: 0.1.0
 
     environment:
-      IOCSH_PS1: bl01t-di-cam-01 >
-      IOC_NAME: bl01t-di-cam-01
-      IOC_PREFIX: BL01T-DI-CAM-01
+      IOCSH_PS1: ophyd-adsim-cam >
+      IOC_NAME: ophyd-adsim-cam
+      IOC_PREFIX: "XF:31IDA-BI{Cam:Tbl}"
 
     volumes:
-      - ../../opi/auto-generated/bl01t-di-cam-01:/epics/opi
+      - ../../opi/auto-generated/ophyd-adsim-cam:/epics/opi
 
     command: /epics/ioc/start.sh
 
     configs:
-      - source: bl01t-di-cam-01_config
+      - source: ophyd-adsim-cam_config
         target: epics/ioc/config
 
 configs:
-  bl01t-di-cam-01_config:
+  ophyd-adsim-cam_config:
     file: ./config
 
 include:
