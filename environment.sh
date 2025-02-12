@@ -31,7 +31,11 @@ fi
 echo using $docker as container engine
 
 # ensure local container users can access X11 server
-xhost +SI:localuser:$(id -un)
+# this does not work for github actions
+# xhost +SI:localuser:$(id -un)
+if [[ -n "$DISPLAY" && -x "$(command -v xhost)" ]]; then
+    xhost +SI:localuser:$(id -un)
+fi
 
 # Set up the environment for compose ###########################################
 
