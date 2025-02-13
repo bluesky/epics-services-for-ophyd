@@ -9,7 +9,7 @@ entities:
 
   - type: ADSimDetector.simDetector
     PORT: cam # nto usre if thise should be det or cam?
-    P: "ADSIM:XF:31IDA-BI{Cam:Tbl}" 
+    P: "XF:31IDA-BI{Cam:Tbl}" 
     R: ":cam1:" # no clue, changed from det to cam1, tyr for cam 1 first
     # DATATYPE:0 = Int8 - TODO add an enum to the support yaml
     DATATYPE: 0
