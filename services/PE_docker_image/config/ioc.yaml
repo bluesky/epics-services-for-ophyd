@@ -8,23 +8,12 @@ entities:
     IOC: "{{ ioc_name | upper }}"
 
   - type: ADSimDetector.simDetector
-    PORT: cam # nto usre if thise should be det or cam?
+    PORT: cam
     P: "XF:31IDA-BI{Cam:Tbl}" 
-    R: ":cam1:" # no clue, changed from det to cam1, tyr for cam 1 first
-    # DATATYPE:0 = Int8 - TODO add an enum to the support yaml
+    R: ":cam1:" 
     DATATYPE: 0
     WIDTH: 1024
     HEIGHT: 1024
-
-  # - type: epics.PostStartupCommand
-  #   command: |
-  #     dbpf XF:31IDA-BI{Cam:Tbl}:cam1:AcquireTime 0.1
-  #     dbpf XF:31IDA-BI{Cam:Tbl}:cam1:ROI1:EnableCallbacks 1
-  #     dbpf XF:31IDA-BI{Cam:Tbl}:cam1:ROI2:EnableCallbacks 1
-  #     dbpf XF:31IDA-BI{Cam:Tbl}:cam1:ROI3:EnableCallbacks 1
-  #     dbpf XF:31IDA-BI{Cam:Tbl}:cam1:ROI4:EnableCallbacks 1
-  #     dbpf XF:31IDA-BI{Cam:Tbl}:cam1:Acquire 1
-
 
   - type: ADCore.NDROI
     PORT: ROI1
@@ -82,36 +71,36 @@ entities:
     HIST_SIZE: 20
 
   - type: ADCore.NDStats
-    PORT: stats2
+    PORT: Stats2
     P: XF:31IDA-BI{Cam:Tbl}
-    R: ":stats2:"
+    R: ":Stats2:"
     NDARRAY_PORT: cam
     XSIZE: 1024
     YSIZE: 1024
     HIST_SIZE: 20
   
   - type: ADCore.NDStats
-    PORT: stats3
+    PORT: Stats3
     P: XF:31IDA-BI{Cam:Tbl}
-    R: ":stats3:"
+    R: ":Stats3:"
     NDARRAY_PORT: cam
     XSIZE: 1024
     YSIZE: 1024
     HIST_SIZE: 20
 
   - type: ADCore.NDStats
-    PORT: stats4
+    PORT: Stats4
     P: XF:31IDA-BI{Cam:Tbl}
-    R: ":stats4:"
+    R: ":Stats4:"
     NDARRAY_PORT: cam
     XSIZE: 1024
     YSIZE: 1024
     HIST_SIZE: 20
 
   - type: ADCore.NDStats
-    PORT: stats5
+    PORT: Stats5
     P: XF:31IDA-BI{Cam:Tbl}
-    R: ":stats5:"
+    R: ":Stats5:"
     NDARRAY_PORT: cam
     XSIZE: 1024
     YSIZE: 1024

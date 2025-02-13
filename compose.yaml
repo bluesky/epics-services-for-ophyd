@@ -15,15 +15,10 @@
 # docker compose up --detach
 
 include:
-  # all profiles
-  # - services/AD_docker_image/compose.yml
   - services/MOTOR_docker_image/compose.yml
   - services/PE_docker_image/compose.yml
   - services/gateway/compose.yml
   - services/pvagw/compose.yml
-
-  # develop profile only
-  # - services/phoebus/compose.yml
 
   # deploy profile only
   - services/epics-opis/compose.yml
