@@ -16,14 +16,14 @@ entities:
     WIDTH: 1024
     HEIGHT: 1024
 
-  - type: epics.PostStartupCommand
-    command: |
-      dbpf XF:31IDA-BI{Cam:Tbl}:cam1:AcquireTime 0.1
-      dbpf XF:31IDA-BI{Cam:Tbl}:cam1:ROI1:EnableCallbacks 1
-      dbpf XF:31IDA-BI{Cam:Tbl}:cam1:ROI2:EnableCallbacks 1
-      dbpf XF:31IDA-BI{Cam:Tbl}:cam1:ROI3:EnableCallbacks 1
-      dbpf XF:31IDA-BI{Cam:Tbl}:cam1:ROI4:EnableCallbacks 1
-      dbpf XF:31IDA-BI{Cam:Tbl}:cam1:Acquire 1
+  # - type: epics.PostStartupCommand
+  #   command: |
+  #     dbpf XF:31IDA-BI{Cam:Tbl}:cam1:AcquireTime 0.1
+  #     dbpf XF:31IDA-BI{Cam:Tbl}:cam1:ROI1:EnableCallbacks 1
+  #     dbpf XF:31IDA-BI{Cam:Tbl}:cam1:ROI2:EnableCallbacks 1
+  #     dbpf XF:31IDA-BI{Cam:Tbl}:cam1:ROI3:EnableCallbacks 1
+  #     dbpf XF:31IDA-BI{Cam:Tbl}:cam1:ROI4:EnableCallbacks 1
+  #     dbpf XF:31IDA-BI{Cam:Tbl}:cam1:Acquire 1
 
 
   - type: ADCore.NDROI
@@ -73,10 +73,10 @@ entities:
     FTVL: CHAR
 
   - type: ADCore.NDStats
-    PORT: stats1
+    PORT: Stats1
     P: XF:31IDA-BI{Cam:Tbl}
-    R: ":stats1:"
-    NDARRAY_PORT: cam
+    R: ":Stats1:"
+    NDARRAY_PORT: Stats1
     XSIZE: 1024
     YSIZE: 1024
     HIST_SIZE: 20
@@ -127,4 +127,10 @@ entities:
     PORT: TIFF1
     P: XF:31IDA-BI{Cam:Tbl}
     R: ":TIFF1:"
+    NDARRAY_PORT: cam
+
+  - type: ADCore.NDOverlay
+    PORT: OVER1
+    P: XF:31IDA-BI{Cam:Tbl}
+    R: ":Over1:"
     NDARRAY_PORT: cam
