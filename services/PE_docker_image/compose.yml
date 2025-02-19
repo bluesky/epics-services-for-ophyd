@@ -18,6 +18,7 @@ services:
 
     volumes:
       - ../../opi/auto-generated/ophyd-adsim-cam:/epics/opi
+      - /tmp/ophyd_AD_test:/tmp/ophyd_AD_test
 
     command: /epics/ioc/start.sh
 
