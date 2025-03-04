@@ -126,20 +126,9 @@ entities:
     ENABLED: 1
     TIMEOUT: 5.0
 
-  # - type: ADCore.NDOverlay
-  #   P: XF:31IDA-BI{Cam:Tbl}
-  #   R: ":Over1:"
-  #   NAME: ROI1
-  #   SHAPE: '1'
-  #   O: 'Over1:1'
-  #   XPOS: XF:31IDA-BI{Cam:Tbl}:ROI1:MinX_RBV
-  #   YPOS: XF:31IDA-BI{Cam:Tbl}:ROI1:MinY_RBV
-  #   XSIZE: XF:31IDA-BI{Cam:Tbl}:ROI1:SizeX_RBV
-  #   YSIZE: XF:31IDA-BI{Cam:Tbl}:ROI1:SizeY_RBV
-  #   XCENT: XF:31IDA-BI{Cam:Tbl}:ROI1:CenterX_RBV
-  #   YCENT: XF:31IDA-BI{Cam:Tbl}:ROI1:CenterY_RBV
-  #   XWIDTH: XF:31IDA-BI{Cam:Tbl}:ROI1:Width_RBV
-  #   YWIDTH: XF:31IDA-BI{Cam:Tbl}:ROI1:Height_RBV
-  #   PORT: Over1
-  #   NDARRAY_PORT: cam
+  - type: ADCore.NDOverlay
+    P: XF:31IDA-BI{Cam:Tbl}
+    R: ":Over1:"
+    PORT: Over1
+    NDARRAY_PORT: cam
 
