@@ -26,6 +26,7 @@ include:
 services:
   init:
     image: ubuntu:latest
+    platform: linux/amd64
     security_opt:
       - label=disable
     restart: no
