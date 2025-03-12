@@ -138,8 +138,8 @@ entities:
     PORT: EnableCallbacks_RBV
     NDARRAY_PORT: cam
 
-  - type: ADCore.NDTransform
-    P: XF:31IDA-BI{Cam:Tbl}
-    R: ":netCDF1:"
-    PORT: EnableCallbacks_RBV
-    NDARRAY_PORT: cam
+  # - type: ADCore.NDTransform
+  #   P: XF:31IDA-BI{Cam:Tbl}
+  #   R: ":netCDF1:"
+  #   PORT: EnableCallbacks_RBV
+  #   NDARRAY_PORT: cam
