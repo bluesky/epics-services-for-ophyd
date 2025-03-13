@@ -118,6 +118,12 @@ entities:
     R: ":TIFF1:"
     NDARRAY_PORT: cam
 
+  - type: ADCore.NDFileJPEG
+    PORT: JPEG1
+    P: XF:31IDA-BI{Cam:Tbl}
+    R: ":JPEG1:"
+    NDARRAY_PORT: cam
+
   - type: ADCore.NDColorConvert
     PORT: CC1
     P: XF:31IDA-BI{Cam:Tbl}
