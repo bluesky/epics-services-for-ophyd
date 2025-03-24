@@ -15,8 +15,8 @@
 # docker compose up --detach
 
 include:
-  - services/motor_sim_docker_image/compose.yml
-  - services/ad_sim_docker_image/compose.yml
+  - services/motorsim_ioc/compose.yml
+  - services/adsim_ioc/compose.yml
   - services/gateway/compose.yml
   - services/pvagw/compose.yml
 
