@@ -145,8 +145,8 @@ entities:
     NDARRAY_PORT: cam
 
   - type: ADCore.NDFileNetCDF
+    PORT: NetCDF1
     P: XF:31IDA-BI{Cam:Tbl}
     R: ":netCDF1:"
     NDARRAY_PORT: cam
-    PORT: NETCDF1
-    TIMEOUT: 20.0
+
