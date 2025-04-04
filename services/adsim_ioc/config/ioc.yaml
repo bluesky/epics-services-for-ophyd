@@ -150,3 +150,9 @@ entities:
     R: ":netCDF1:"
     NDARRAY_PORT: cam
 
+  - type: ADCore.NDCircularBuff
+    PORT: CB
+    P: XF:31IDA-BI{Cam:Tbl}
+    R: ":CB1:"
+    NDARRAY_PORT: cam
+
